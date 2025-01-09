@@ -23,7 +23,7 @@ if uploaded_file:
 
     # Format ulang kolom tanggal ke DD/MM/YYYY
     date_columns = [
-        "Tgl. Gabung", "TANGGAL CAIR", "TANGGAL KEMATIAN", "TANGGAL ACC DNR"
+        "Tgl. Gabung", "TANGGAL CAIR", "TANGGAL ACC DNR"
     ]
     for col in date_columns:
         combined_data[col] = pd.to_datetime(combined_data[col], errors="coerce").dt.strftime("%d/%m/%Y")
